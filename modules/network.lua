@@ -47,12 +47,12 @@ function scan()
         obj.down_speed = format_speed(obj.down_bytes)
         obj.up_speed = format_speed(obj.up_bytes)
 
-        obj.display_text = hs.styledtext.new('▲ ' .. obj.up_speed .. '\n▼ ' .. obj.down_speed, {font={size=9}, color={hex='#FFFFFF'}, paragraphStyle={alignment="left", maximumLineHeight=18}})
+        obj.display_text = hs.styledtext.new('▲' .. obj.up_speed .. '\n▼' .. obj.down_speed, {font={size=9}, color={hex='#FFFFFF'}, paragraphStyle={alignment="left", maximumLineHeight=18}})
 
         obj.last_down = obj.current_down
         obj.last_up = obj.current_up
 
-        local canvas = hs.canvas.new{x = 0, y = 0, h = 24, w = 70}
+        local canvas = hs.canvas.new{x = 0, y = 0, h = 24, w = 55}
         canvas[1] = {type = 'text', text = obj.display_text}
         menubar:setIcon(canvas:imageFromCanvas())
         canvas:delete()
@@ -68,11 +68,11 @@ function format_speed(bytes)
         -- 单位 KB/s
         if bytes < 1048576 then
             -- 因为是每两秒刷新一次，所以要除以 （1024 * 2）
-            return string.format('%6.1f', bytes / 2048) .. ' KB/s'
+            return string.format('%6.0f', bytes / 2048) .. ' KB/s'
             -- 单位 MB/s
         else
             -- 除以 （1024 * 1024 * 2）
-            return string.format('%6.1f', bytes / 2097152) .. ' MB/s'
+            return string.format('%6.0f', bytes / 2097152) .. ' MB/s'
         end
     end
 end
