@@ -20,7 +20,7 @@ rm -rf .gitignore
 rm -rf .config
 rm -rf .emoji
 # 拉取工程（为加快拉取速度，不拉取历史记录）
-git clone git@github.com:KURANADO2/hammerspoon-kuranado.git --depth=1
+git clone git@github.com:Przeblysk/hammerspoon-kuranado.git --depth=1
 mv hammerspoon-kuranado/* .
 mv hammerspoon-kuranado/.git .
 mv hammerspoon-kuranado/.gitignore .
