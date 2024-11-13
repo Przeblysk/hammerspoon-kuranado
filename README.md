@@ -1,3 +1,6 @@
+fork from [KURANADO2/hammerspoon-kuranado](https://github.com/KURANADO2/hammerspoon-kuranado)
+thanks for [KURANADO2](https://github.com/KURANADO2)
+
 <div align='center'>
     <img src='./images/logo.png' width='700' alt='logo'/>
 </div>
@@ -31,7 +34,7 @@ English | [简体中文](./README-CN.md) | [日本語](./README-JP.md)
 All scripts in this project are based on Hammerspoon. Please download and install [Hammerspoon](https://github.com/Hammerspoon/hammerspoon/releases), and then execute the following commands:
 
 ```shell
-curl -fsSL https://raw.githubusercontent.com/KURANADO2/hammerspoon-kuranado/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/Przeblysk/hammerspoon-kuranado/main/install.sh | sh
 ```
 
 If the above `curl` command cannot download `install.sh`, please open the terminal agent and try again or manually download `install.sh` and execute it
@@ -58,6 +61,7 @@ If a conflict is found, resolve the conflict and then execute `git pull origin m
 In addition to manual update, this project also supports automatic update check and installation, and automatic update can be turned off in the function menu (not recommended)
 
 The automatic update principle is as follows:
+
 - .config file (user configuration file) added to .gitignore file
 - Periodically execute `git pull origin main`
 - If a conflict is found, the console will print the information about the failure of automatic update. In this case, please install the update manually, refer to: [Manual update](https://github.com/KURANADO2/hammerspoon-kuranado#%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0)
@@ -66,6 +70,7 @@ The automatic update principle is as follows:
 ---
 
 ## This project provides functions
+
 ### Function menu
 
 Click the function item with the mouse to enable/disable the function item
@@ -137,15 +142,16 @@ The principle is to read the latest record of the clipboard, and simulate a key 
 ### Input method switch
 
 The three most commonly used input methods for individuals:
+
 - The system comes with ABC
 - The system comes with Simplified Pinyin
 - The system commes with Japanese Input
 
-Shortcut | Function
--|-
-`⌥` `J`|ABC
-`⌥` `K`|Simplified Pinyin
-`⌥` `L`|Japanese Input Method
+| Shortcut | Function              |
+| -------- | --------------------- |
+| `⌥` `J`  | ABC                   |
+| `⌥` `K`  | Simplified Pinyin     |
+| `⌥` `L`  | Japanese Input Method |
 
 ---
 
@@ -158,11 +164,12 @@ Alternative to [KeyCastr](https://github.com/keycastr/keycastr)
 </div>
 
 Note: At present, a simple key echo has been implemented, which is still far from KeyCastr in function, such as:
+
 - Multi-canvas is not supported
 - Canvas does not support drag and drop
 - lack of animation effects
 - ...
-Interested guys are welcome to propose implementation ideas, or directly contribute code (do not understand Objective-C very well, and the implementation source code of KeyCastr cannot be understood personally)
+  Interested guys are welcome to propose implementation ideas, or directly contribute code (do not understand Objective-C very well, and the implementation source code of KeyCastr cannot be understood personally)
 
 ---
 
@@ -200,69 +207,71 @@ To customize shortcut keys, please modify the shortcut.lua file. If the shortcut
 cp shortcut.lua.example shortcut.lua
 ```
 
-Shortcut | Function
--|-
-`⌃` `⌥` `Z`|Automatic grid layout of multiple Windows of the same application
-`⌃` `⌥` `X`|Automatic grid layout of all windows in the same Mission Control Space（What is [Mission Control Space?](https://support.apple.com/zh-cn/guide/mac-help/mh35798/14.0/mac/14.0)？）
-`⌃` `⌥` `A`|All windows of the same app are automatically divided horizontally or vertically
-`⌃` `⌥` `S`|All windows in the same Mission Control Space are automatically divided horizontally or vertically
-`⌃` `⌥` `←`|Left half screen
-`⌃` `⌥` `→`|Right half screen
-`⌃` `⌥` `↑`|Top half screen
-`⌃` `⌥` `↓`|Lower half screen
-`⌃` `⌥` `U`|Top left corner
-`⌃` `⌥` `I`|Top right corner
-`⌃` `⌥` `J`|Lower left
-`⌃` `⌥` `K`|Bottom right corner
-`⌃` `⌥` `1`|1/9
-`⌃` `⌥` `2`|2/9
-`⌃` `⌥` `3`|3/9
-`⌃` `⌥` `4`|4/9
-`⌃` `⌥` `5`|5/9
-`⌃` `⌥` `6`|6/9
-`⌃` `⌥` `7`|7/9
-`⌃` `⌥` `8`|8/9
-`⌃` `⌥` `9`|9/9
-`⌃` `⌥` `C`|Center
-`⌃` `⌥` `D`|Left 1/3 (landscape) or top 1/3 (portrait)
-`⌃` `⌥` `F`|Medium 1/3
-`⌃` `⌥` `G`|Right 1/3 (landscape) or bottom 1/3 (portrait)
-`⌃` `⌥` `E`|Left 2/3 (landscape) or top 2/3 (portrait)
-`⌃` `⌥` `T`|Right 2/3 (landscape) or bottom 2/3 (portrait)
-`⌃` `⌥` `=`|Enlarge the window in equal proportion
-`⌃` `⌥` `-`|Reduce the window proportionally
-`⌃` `⌥` `↩︎`|Maximize
-`⌃` `⌥` `⌘` `↑`|Move the window to the upper screen
-`⌃` `⌥` `⌘` `↓`|Move the window to the lower screen
-`⌃` `⌥` `⌘` `←`|Move the window to the left screen
-`⌃` `⌥` `⌘` `→`|Move the window to the right screen
-`⌘` &#96; |在同一应用的多个窗口之间切换（此为 Mac 系统自带快捷键）
-`⌥` `Q` |Open QQ
-`⌥` `W` |Open WeChat
-`⌥` `V` |Open Visual Studio Code
-`⌥` `F` |Open Finder
-`⌥` `C` |Open Chrome
-`⌥` `J` |Open Intellij IDEA
-`⌥` `N` |Open WizNote
-`⌥` `D` |Open DataGrip
-`⌥` `T` |Open iTerm2
-`⌥` `M` |Open MailMaster
-`⌥` `P` |Open Postman
-`⌥` `O` |Open Word
-`⌥` `E` |Open Excel
-`⌥` `Y` |Open PyCharm
-`⌥` `R` |Open Another Redis Desktop Manager
-`⌥` `K` |Emoji search
-`⌃` `⌘` `V`|Paste the characters in the clipboard by simulating keystrokes (to solve the problem that some websites prohibit pasting passwords)
-`⌥` `L` |Switch between Simplified Pinyin and Japanese input methods
-`⌥` `/` |Show/hide shortcut list
+| Shortcut        | Function                                                                                                                                                                           |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `⌃` `⌥` `Z`     | Automatic grid layout of multiple Windows of the same application                                                                                                                  |
+| `⌃` `⌥` `X`     | Automatic grid layout of all windows in the same Mission Control Space（What is [Mission Control Space?](https://support.apple.com/zh-cn/guide/mac-help/mh35798/14.0/mac/14.0)？） |
+| `⌃` `⌥` `A`     | All windows of the same app are automatically divided horizontally or vertically                                                                                                   |
+| `⌃` `⌥` `S`     | All windows in the same Mission Control Space are automatically divided horizontally or vertically                                                                                 |
+| `⌃` `⌥` `←`     | Left half screen                                                                                                                                                                   |
+| `⌃` `⌥` `→`     | Right half screen                                                                                                                                                                  |
+| `⌃` `⌥` `↑`     | Top half screen                                                                                                                                                                    |
+| `⌃` `⌥` `↓`     | Lower half screen                                                                                                                                                                  |
+| `⌃` `⌥` `U`     | Top left corner                                                                                                                                                                    |
+| `⌃` `⌥` `I`     | Top right corner                                                                                                                                                                   |
+| `⌃` `⌥` `J`     | Lower left                                                                                                                                                                         |
+| `⌃` `⌥` `K`     | Bottom right corner                                                                                                                                                                |
+| `⌃` `⌥` `1`     | 1/9                                                                                                                                                                                |
+| `⌃` `⌥` `2`     | 2/9                                                                                                                                                                                |
+| `⌃` `⌥` `3`     | 3/9                                                                                                                                                                                |
+| `⌃` `⌥` `4`     | 4/9                                                                                                                                                                                |
+| `⌃` `⌥` `5`     | 5/9                                                                                                                                                                                |
+| `⌃` `⌥` `6`     | 6/9                                                                                                                                                                                |
+| `⌃` `⌥` `7`     | 7/9                                                                                                                                                                                |
+| `⌃` `⌥` `8`     | 8/9                                                                                                                                                                                |
+| `⌃` `⌥` `9`     | 9/9                                                                                                                                                                                |
+| `⌃` `⌥` `C`     | Center                                                                                                                                                                             |
+| `⌃` `⌥` `D`     | Left 1/3 (landscape) or top 1/3 (portrait)                                                                                                                                         |
+| `⌃` `⌥` `F`     | Medium 1/3                                                                                                                                                                         |
+| `⌃` `⌥` `G`     | Right 1/3 (landscape) or bottom 1/3 (portrait)                                                                                                                                     |
+| `⌃` `⌥` `E`     | Left 2/3 (landscape) or top 2/3 (portrait)                                                                                                                                         |
+| `⌃` `⌥` `T`     | Right 2/3 (landscape) or bottom 2/3 (portrait)                                                                                                                                     |
+| `⌃` `⌥` `=`     | Enlarge the window in equal proportion                                                                                                                                             |
+| `⌃` `⌥` `-`     | Reduce the window proportionally                                                                                                                                                   |
+| `⌃` `⌥` `↩︎`    | Maximize                                                                                                                                                                           |
+| `⌃` `⌥` `⌘` `↑` | Move the window to the upper screen                                                                                                                                                |
+| `⌃` `⌥` `⌘` `↓` | Move the window to the lower screen                                                                                                                                                |
+| `⌃` `⌥` `⌘` `←` | Move the window to the left screen                                                                                                                                                 |
+| `⌃` `⌥` `⌘` `→` | Move the window to the right screen                                                                                                                                                |
+| `⌘` &#96;       | 在同一应用的多个窗口之间切换（此为 Mac 系统自带快捷键）                                                                                                                            |
+| `⌥` `Q`         | Open QQ                                                                                                                                                                            |
+| `⌥` `W`         | Open WeChat                                                                                                                                                                        |
+| `⌥` `V`         | Open Visual Studio Code                                                                                                                                                            |
+| `⌥` `F`         | Open Finder                                                                                                                                                                        |
+| `⌥` `C`         | Open Chrome                                                                                                                                                                        |
+| `⌥` `J`         | Open Intellij IDEA                                                                                                                                                                 |
+| `⌥` `N`         | Open WizNote                                                                                                                                                                       |
+| `⌥` `D`         | Open DataGrip                                                                                                                                                                      |
+| `⌥` `T`         | Open iTerm2                                                                                                                                                                        |
+| `⌥` `M`         | Open MailMaster                                                                                                                                                                    |
+| `⌥` `P`         | Open Postman                                                                                                                                                                       |
+| `⌥` `O`         | Open Word                                                                                                                                                                          |
+| `⌥` `E`         | Open Excel                                                                                                                                                                         |
+| `⌥` `Y`         | Open PyCharm                                                                                                                                                                       |
+| `⌥` `R`         | Open Another Redis Desktop Manager                                                                                                                                                 |
+| `⌥` `K`         | Emoji search                                                                                                                                                                       |
+| `⌃` `⌘` `V`     | Paste the characters in the clipboard by simulating keystrokes (to solve the problem that some websites prohibit pasting passwords)                                                |
+| `⌥` `L`         | Switch between Simplified Pinyin and Japanese input methods                                                                                                                        |
+| `⌥` `/`         | Show/hide shortcut list                                                                                                                                                            |
 
 ---
 
 ## About
+
 ### About app-bundle-id
 
 In the above configuration, use shortcut keys to switch applications, you need to get the bundle id of the application (please note that the bundle id configured in hammerspoon needs to be case-sensitive, otherwise the console will report an error), which can be obtained as follows:
+
 ```shell
 osascript -e 'id of app "Name of App"'
 ```
@@ -328,7 +337,7 @@ At this point, we can select the mail application in the Finder, right-click: sh
 
 ## Refer
 
-- [学长博客 - OSX--OSX应用快速切换方案](https://mrdear.cn/posts/osx_app_switcher.html)
+- [学长博客 - OSX--OSX 应用快速切换方案](https://mrdear.cn/posts/osx_app_switcher.html)
 - [Official Quick Start](https://www.hammerspoon.org/go/)
 - [Official Document](http://www.hammerspoon.org/docs/)
 - [hammerspoon-init](https://github.com/rtoshiro/hammerspoon-init)
