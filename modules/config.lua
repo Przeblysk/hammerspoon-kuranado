@@ -11,6 +11,11 @@ defaultConfig = {
         enable = true,
     },
     {
+        module = "modules.application",
+        name = "应用切换",
+        enable = true,
+    },
+    {
         module = "modules.network",
         name = "实时网速",
         enable = true,
